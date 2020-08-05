@@ -1,0 +1,47 @@
+intents:
+  - greet
+  - goodbye
+  - bot_challenge
+  - iml_query
+
+actions:
+  - utter_ask_src
+  - utter_ask_dest
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"  
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_src:
+  - text: "Please provide the source (From) app."
+
+  utter_ask_dest:
+  - text: "Please provide the destination (To) app."
+
+  utter_submit:
+  - text: "Pease Wait, finding interfaces from {src} to {dest}"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+entities:
+  - app
+
+slots:
+  src:
+    type: text
+    auto_fill: false
+
+  dest:
+    type: text
+    auto_fill: false
+
+forms:
+  - iml_form

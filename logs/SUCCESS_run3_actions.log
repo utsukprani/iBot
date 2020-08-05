@@ -1,0 +1,19 @@
+(base) C:\SelfLearning\rasa\projects\imlBot>rasa run actions -vv
+2020-08-05 13:59:43 INFO     rasa_sdk.endpoint  - Starting action endpoint server...
+2020-08-05 13:59:43 INFO     rasa_sdk.executor  - Registered function for 'iml_form'.
+2020-08-05 13:59:43 INFO     rasa_sdk.endpoint  - Action endpoint is up and running on http://localhost:5055
+2020-08-05 13:59:43 DEBUG    rasa_sdk.utils  - Using the default number of Sanic workers (1).
+2020-08-05 14:00:53 DEBUG    rasa_sdk.executor  - Received request to run 'iml_form'
+2020-08-05 14:00:53 DEBUG    rasa_sdk.forms  - There is no active form
+2020-08-05 14:00:53 DEBUG    rasa_sdk.forms  - Activated the form 'iml_form'
+2020-08-05 14:00:53 DEBUG    rasa_sdk.forms  - No pre-filled required slots to validate.
+2020-08-05 14:00:53 DEBUG    rasa_sdk.forms  - Validating user input '{'intent': {'name': 'iml_query', 'confidence': 1.0}, 'entities': [{'entity': 'app', 'start': 20, 'end': 26, 'role': 'src', 'value': 'Portal', 'extractor': 'DIETClassifier'}, {'entity': 'app', 'start': 30, 'end': 33, 'role': 'dest', 'value': 'UFE', 'extractor': 'DIETClassifier'}], 'intent_ranking': [{'name': 'iml_query', 'confidence': 1.0}, {'name': 'greet', 'confidence': 2.331394799437447e-10}, {'name': 'bot_challenge', 'confidence': 3.85201627539633e-11}, {'name': 'goodbye', 'confidence': 1.3318267658418012e-13}], 'response_selector': {'default': {'response': {'name': None, 'confidence': 0.0}, 'ranking': [], 'full_retrieval_intent': None}}, 'text': 'any interfaces from Portal to UFE'}'
+2020-08-05 14:00:53 DEBUG    rasa_sdk.forms  - Extracted 'Portal' for extra slot 'src'.
+2020-08-05 14:00:53 DEBUG    rasa_sdk.forms  - Extracted 'UFE' for extra slot 'dest'.
+2020-08-05 14:00:53 DEBUG    rasa_sdk.forms  - Validating extracted slots: {'src': 'Portal', 'dest': 'UFE'}
+2020-08-05 14:00:53 DEBUG    rasa_sdk.forms  - No slots left to request, all required slots are filled:
+        src: Portal
+        dest: UFE
+2020-08-05 14:00:53 DEBUG    rasa_sdk.forms  - Submitting the form 'iml_form'
+2020-08-05 14:00:53 DEBUG    rasa_sdk.forms  - Deactivating the form 'iml_form'
+2020-08-05 14:00:53 DEBUG    rasa_sdk.executor  - Finished running 'iml_form'
