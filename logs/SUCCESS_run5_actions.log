@@ -1,0 +1,27 @@
+(base) C:\SelfLearning\rasa\projects\imlBot>rasa run actions -vv
+2020-08-05 14:26:39 INFO     rasa_sdk.endpoint  - Starting action endpoint server...
+2020-08-05 14:26:39 INFO     rasa_sdk.executor  - Registered function for 'iml_form'.
+2020-08-05 14:26:39 INFO     rasa_sdk.endpoint  - Action endpoint is up and running on http://localhost:5055
+2020-08-05 14:26:39 DEBUG    rasa_sdk.utils  - Using the default number of Sanic workers (1).
+2020-08-05 14:26:59 DEBUG    rasa_sdk.executor  - Received request to run 'iml_form'
+2020-08-05 14:26:59 DEBUG    rasa_sdk.forms  - There is no active form
+2020-08-05 14:26:59 DEBUG    rasa_sdk.forms  - Activated the form 'iml_form'
+2020-08-05 14:26:59 DEBUG    rasa_sdk.forms  - No pre-filled required slots to validate.
+2020-08-05 14:26:59 DEBUG    rasa_sdk.forms  - Validating user input '{'intent': {'name': 'iml_query', 'confidence': 0.999904990196228}, 'entities': [{'entity': 'app', 'start': 28, 'end': 31, 'role': 'dest', 'value': 'CRM', 'extractor': 'DIETClassifier'}], 'intent_ranking': [{'name': 'iml_query', 'confidence': 0.999904990196228}, {'name': 'greet', 'confidence': 5.109065386932344e-05}, {'name': 'bot_challenge', 'confidence': 4.387750595924445e-05}, {'name': 'goodbye', 'confidence': 4.108630946575431e-08}], 'response_selector': {'default': {'response': {'name': None, 'confidence': 0.0}, 'ranking': [], 'full_retrieval_intent': None}}, 'text': 'are there any interfaces to CRM'}'
+2020-08-05 14:26:59 DEBUG    rasa_sdk.forms  - Extracted 'CRM' for extra slot 'dest'.
+2020-08-05 14:26:59 DEBUG    rasa_sdk.forms  - Validating extracted slots: {'dest': 'CRM'}
+2020-08-05 14:26:59 DEBUG    rasa_sdk.forms  - Request next slot 'src'
+2020-08-05 14:26:59 DEBUG    rasa_sdk.executor  - Finished running 'iml_form'
+2020-08-05 14:27:09 DEBUG    rasa_sdk.executor  - Received request to run 'iml_form'
+2020-08-05 14:27:09 DEBUG    rasa_sdk.forms  - The form '{'name': 'iml_form', 'validate': True, 'rejected': False, 'trigger_message': {'intent': {'name': 'iml_query', 'confidence': 0.999904990196228}, 'entities': [{'entity': 'app', 'start': 28, 'end': 31, 'role': 'dest', 'value': 'CRM', 'extractor': 'DIETClassifier'}], 'intent_ranking': [{'name': 'iml_query', 'confidence': 0.999904990196228}, {'name': 'greet', 'confidence': 5.109065386932344e-05}, {'name': 'bot_challenge', 'confidence': 4.387750595924445e-05}, {'name': 'goodbye', 'confidence': 4.108630946575431e-08}], 'response_selector': {'default': {'response': {'name': None, 'confidence': 0.0}, 'ranking': [], 'full_retrieval_intent': None}}, 'text': 'are there any interfaces to CRM'}}' is active
+2020-08-05 14:27:09 DEBUG    rasa_sdk.forms  - Validating user input '{'intent': {'name': 'iml_query', 'confidence': 0.999862909317016}, 'entities': [{'entity': 'app', 'start': 0, 'end': 6, 'role': 'src', 'value': 'Portal', 'extractor': 'DIETClassifier'}], 'intent_ranking': [{'name': 'iml_query', 'confidence': 0.999862909317016}, {'name': 'greet', 'confidence': 0.00013028585817600002}, {'name': 'bot_challenge', 'confidence': 6.120370926510077e-06}, {'name': 'goodbye', 'confidence': 7.005628503975458e-07}], 'response_selector': {'default': {'response': {'name': None, 'confidence': 0.0}, 'ranking': [], 'full_retrieval_intent': None}}, 'text': 'Portal'}'
+2020-08-05 14:27:09 DEBUG    rasa_sdk.forms  - Trying to extract requested slot 'src' ...
+2020-08-05 14:27:09 DEBUG    rasa_sdk.forms  - Got mapping '{'type': 'from_entity', 'entity': 'app', 'intent': ['iml_query'], 'not_intent': [], 'role': 'src', 'group': None}'
+2020-08-05 14:27:09 DEBUG    rasa_sdk.forms  - Successfully extracted 'Portal' for requested slot 'src'
+2020-08-05 14:27:09 DEBUG    rasa_sdk.forms  - Validating extracted slots: {'src': 'Portal'}
+2020-08-05 14:27:09 DEBUG    rasa_sdk.forms  - No slots left to request, all required slots are filled:
+        src: Portal
+        dest: CRM
+2020-08-05 14:27:09 DEBUG    rasa_sdk.forms  - Submitting the form 'iml_form'
+2020-08-05 14:27:09 DEBUG    rasa_sdk.forms  - Deactivating the form 'iml_form'
+2020-08-05 14:27:09 DEBUG    rasa_sdk.executor  - Finished running 'iml_form'
