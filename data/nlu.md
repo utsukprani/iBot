@@ -39,6 +39,9 @@
 - towards [UFE]{"entity":"app", "role":"dest"} from [Portal]{"entity":"app", "role":"src"}
 - i need some info about interfaces
 - where can i get service information
+- [CRM](app)
+- [UFE](app)
+- [Portal](app)
 
 ## lookup:app
 data/apps.txt

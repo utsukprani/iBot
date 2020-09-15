@@ -42,9 +42,25 @@ class ImlForm(FormAction):
         return ["src", "dest"]
 
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+        #return {
+        #    "src": [
+        #        self.from_entity(entity="app",intent="iml_query",role="src"),
+        #        self.from_entity(entity="app",intent="iml_query")
+        #    ],
+        #    "dest" : [
+        #        self.from_entity(entity="app",intent="iml_query",role="dest"),
+        #        self.from_entity(entity="app",intent="iml_query")
+        #    ]
+        #}
         return {
-            "src": self.from_entity(entity="app",intent="iml_query",role="src"),
-            "dest" :self.from_entity(entity="app",intent="iml_query",role="dest")
+            "src": [
+                self.from_entity(entity="app",intent="iml_query",role="src"),
+                self.from_entity(entity="app",intent="iml_query")
+            ],
+            "dest": [
+                self.from_entity(entity="app",intent="iml_query",role="dest"),
+                self.from_entity(entity="app",intent="iml_query")
+            ]
         }
 
     def submit(

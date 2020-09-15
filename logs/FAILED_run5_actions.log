@@ -1,0 +1,27 @@
+(base) D:\rasaProjects\imlBot\iBot>rasa run actions -vv
+2020-09-16 03:27:09 INFO     rasa_sdk.endpoint  - Starting action endpoint server...
+2020-09-16 03:27:09 INFO     rasa_sdk.executor  - Registered function for 'iml_form'.
+2020-09-16 03:27:09 DEBUG    rasa_sdk.utils  - Using the default number of Sanic workers (1).
+2020-09-16 03:28:20 DEBUG    rasa_sdk.executor  - Received request to run 'iml_form'
+2020-09-16 03:28:20 DEBUG    rasa_sdk.forms  - There is no active form
+2020-09-16 03:28:20 DEBUG    rasa_sdk.forms  - Activated the form 'iml_form'
+2020-09-16 03:28:20 DEBUG    rasa_sdk.forms  - No pre-filled required slots to validate.
+2020-09-16 03:28:20 DEBUG    rasa_sdk.forms  - Validating user input '{'intent': {'name': 'iml_query', 'confidence': 0.999996185302734}, 'entities': [], 'intent_ranking': [{'name': 'iml_query', 'confidence': 0.999996185302734}, {'name': 'greet', 'confidence': 3.760426352528156e-06}, {'name': 'bot_challenge', 'confidence': 5.220640275638288e-08}, {'name': 'goodbye', 'confidence': 8.007700280643348e-09}], 'response_selector': {'default': {'response': {'name': None, 'confidence': 0.0}, 'ranking': [], 'full_retrieval_intent': None}}, 'text': 'i need some information about interfaces'}'
+2020-09-16 03:28:20 DEBUG    rasa_sdk.forms  - Validating extracted slots: {}
+2020-09-16 03:28:20 DEBUG    rasa_sdk.forms  - Request next slot 'src'
+2020-09-16 03:28:20 DEBUG    rasa_sdk.executor  - Finished running 'iml_form'
+2020-09-16 03:28:56 DEBUG    rasa_sdk.executor  - Received request to run 'iml_form'
+2020-09-16 03:28:56 DEBUG    rasa_sdk.forms  - The form '{'name': 'iml_form', 'validate': True, 'rejected': False, 'trigger_message': {'intent': {'name': 'iml_query', 'confidence': 0.999996185302734}, 'entities': [], 'intent_ranking': [{'name': 'iml_query', 'confidence': 0.999996185302734}, {'name': 'greet', 'confidence': 3.760426352528156e-06}, {'name': 'bot_challenge', 'confidence': 5.220640275638288e-08}, {'name': 'goodbye', 'confidence': 8.007700280643348e-09}], 'response_selector': {'default': {'response': {'name': None, 'confidence': 0.0}, 'ranking': [], 'full_retrieval_intent': None}}, 'text': 'i need some information about interfaces'}}' is active
+2020-09-16 03:28:56 DEBUG    rasa_sdk.forms  - Validating user input '{'intent': {'name': 'iml_query', 'confidence': 0.999999403953552}, 'entities': [{'entity': 'app', 'start': 0, 'end': 6, 'role': 'O', 'value': 'Portal', 'extractor': 'DIETClassifier'}], 'intent_ranking': [{'name': 'iml_query', 'confidence': 0.999999403953552}, {'name': 'greet', 'confidence': 5.252771870800643e-07}, {'name': 'bot_challenge', 'confidence': 1.0185157606201749e-07}, {'name': 'goodbye', 'confidence': 3.4392663716964483e-10}], 'response_selector': {'default': {'response': {'name': None, 'confidence': 0.0}, 'ranking': [], 'full_retrieval_intent': None}}, 'text': 'Portal'}'
+2020-09-16 03:28:56 DEBUG    rasa_sdk.forms  - Extracted 'Portal' for extra slot 'dest'.
+2020-09-16 03:28:56 DEBUG    rasa_sdk.forms  - Trying to extract requested slot 'src' ...
+2020-09-16 03:28:56 DEBUG    rasa_sdk.forms  - Got mapping '{'type': 'from_entity', 'entity': 'app', 'intent': ['iml_query'], 'not_intent': [], 'role': 'src', 'group': None}'
+2020-09-16 03:28:56 DEBUG    rasa_sdk.forms  - Got mapping '{'type': 'from_entity', 'entity': 'app', 'intent': ['iml_query'], 'not_intent': [], 'role': None, 'group': None}'
+2020-09-16 03:28:56 DEBUG    rasa_sdk.forms  - Successfully extracted 'Portal' for requested slot 'src'
+2020-09-16 03:28:56 DEBUG    rasa_sdk.forms  - Validating extracted slots: {'dest': 'Portal', 'src': 'Portal'}
+2020-09-16 03:28:56 DEBUG    rasa_sdk.forms  - No slots left to request, all required slots are filled:
+        src: Portal
+        dest: Portal
+2020-09-16 03:28:56 DEBUG    rasa_sdk.forms  - Submitting the form 'iml_form'
+2020-09-16 03:28:56 DEBUG    rasa_sdk.forms  - Deactivating the form 'iml_form'
+2020-09-16 03:28:56 DEBUG    rasa_sdk.executor  - Finished running 'iml_form'

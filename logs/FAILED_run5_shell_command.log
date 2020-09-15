@@ -1,0 +1,116 @@
+(base) D:\rasaProjects\imlBot\iBot>rasa shell -vv
+2020-09-16 03:27:25 DEBUG    rasa.model  - Extracted model to 'C:\Users\hpuser\AppData\Local\Temp\tmp5im8oxv6'.
+2020-09-16 03:27:25 DEBUG    rasa.cli.utils  - Parameter 'endpoints' not set. Using default location 'endpoints.yml' instead.
+2020-09-16 03:27:25 DEBUG    rasa.cli.utils  - Parameter 'credentials' not set. Using default location 'credentials.yml' instead.
+2020-09-16 03:27:25 DEBUG    rasa.model  - Extracted model to 'C:\Users\hpuser\AppData\Local\Temp\tmpu40eosbt'.
+2020-09-16 03:27:26 INFO     root  - Connecting to channel 'cmdline' which was specified by the '--connector' argument. Any other channels will be ignored. To connect to all given channels, omit the '--connector' argument.
+2020-09-16 03:27:26 DEBUG    sanic.root  - CORS: Configuring CORS with resources: {'/*': {'origins': [''], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': True, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/*': {'origins': ''}}, 'intercept_exceptions': True, 'always_send': True}}
+2020-09-16 03:27:26 DEBUG    rasa.core.utils  - Available web server routes:
+/webhooks/rest                                     GET                            custom_webhook_CmdlineInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_CmdlineInput.receive
+/                                                  GET                            hello
+2020-09-16 03:27:26 INFO     root  - Starting Rasa server on http://localhost:5005
+2020-09-16 03:27:26 DEBUG    rasa.core.utils  - Using the default number of Sanic workers (1).
+2020-09-16 03:27:26 INFO     root  - Enabling coroutine debugging. Loop id 2278909889560.
+2020-09-16 03:27:26 DEBUG    rasa.model  - Extracted model to 'C:\Users\hpuser\AppData\Local\Temp\tmpqk8o082h'.
+2020-09-16 03:27:27 DEBUG    rasa.utils.tensorflow.models  - Loading the model ...
+2020-09-16 03:27:29 DEBUG    rasa.utils.tensorflow.models  - Finished loading the model.
+2020-09-16 03:27:29 DEBUG    rasa.utils.tensorflow.models  - Building tensorflow prediction graph...
+2020-09-16 03:27:34 DEBUG    rasa.utils.tensorflow.models  - Finished building tensorflow prediction graph.
+2020-09-16 03:27:34 DEBUG    rasa.nlu.classifiers.diet_classifier  - Failed to load model for 'ResponseSelector'. Maybe you did not provide enough training data and no model was trained or the path 'C:\Users\hpuser\AppData\Local\Temp\tmpqk8o082h\nlu' doesn't exist?
+2020-09-16 03:27:34 DEBUG    rasa.core.tracker_store  - Connected to InMemoryTrackerStore.
+2020-09-16 03:27:34 DEBUG    rasa.core.lock_store  - Connected to lock store 'InMemoryLockStore'.
+2020-09-16 03:27:34 DEBUG    rasa.model  - Extracted model to 'C:\Users\hpuser\AppData\Local\Temp\tmp8m67ac0h'.
+2020-09-16 03:27:34 DEBUG    pykwalify.compat  - Using yaml library: c:\users\hpuser\anaconda3\lib\site-packages\ruamel\yaml\__init__.py
+2020-09-16 03:27:34 DEBUG    rasa.utils.tensorflow.models  - Loading the model ...
+2020-09-16 03:27:35 DEBUG    rasa.utils.tensorflow.models  - Finished loading the model.
+2020-09-16 03:27:35 DEBUG    rasa.utils.tensorflow.models  - Building tensorflow prediction graph...
+2020-09-16 03:27:36 DEBUG    rasa.utils.tensorflow.models  - Finished building tensorflow prediction graph.
+2020-09-16 03:27:36 DEBUG    rasa.core.nlg.generator  - Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+Bot loaded. Type a message and press enter (use '/stop' to exit):
+Your input ->  hi
+2020-09-16 03:28:11 DEBUG    rasa.core.tracker_store  - Creating a new tracker for id 'e191fc85104842c28ee4e5fd86fdcf31'.
+2020-09-16 03:28:11 DEBUG    rasa.core.processor  - Starting a new session for conversation ID 'e191fc85104842c28ee4e5fd86fdcf31'.
+2020-09-16 03:28:11 DEBUG    rasa.core.processor  - Action 'action_session_start' ended with events '[<rasa.core.events.SessionStarted object at 0x00000212A70547B8>, <rasa.core.events.ActionExecuted object at 0x00000212A7054780>]'.
+2020-09-16 03:28:11 DEBUG    rasa.core.processor  - Current slot values:
+        dest: None
+        requested_slot: None
+        src: None
+2020-09-16 03:28:12 DEBUG    rasa.nlu.classifiers.diet_classifier  - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2020-09-16 03:28:12 DEBUG    rasa.nlu.selectors.response_selector  - Adding following selector key to message property: default
+2020-09-16 03:28:12 DEBUG    rasa.core.processor  - Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9999886751174927}' and entities '[]'
+2020-09-16 03:28:12 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 4 events.
+2020-09-16 03:28:12 DEBUG    rasa.core.policies.memoization  - Current tracker state [None, None, None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}]
+2020-09-16 03:28:12 DEBUG    rasa.core.policies.memoization  - There is a memorised next action 'utter_greet'
+2020-09-16 03:28:12 DEBUG    rasa.core.policies.form_policy  - There is no active form
+2020-09-16 03:28:12 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_0_MemoizationPolicy
+2020-09-16 03:28:12 DEBUG    rasa.core.processor  - Predicted next action 'utter_greet' with confidence 1.00.
+2020-09-16 03:28:12 DEBUG    rasa.core.processor  - Action 'utter_greet' ended with events '[BotUttered('Hey! How are you?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1600207092.2551472)]'.
+2020-09-16 03:28:12 DEBUG    rasa.core.policies.memoization  - Current tracker state [None, None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}]
+2020-09-16 03:28:12 DEBUG    rasa.core.policies.memoization  - There is a memorised next action 'action_listen'
+2020-09-16 03:28:12 DEBUG    rasa.core.policies.mapping_policy  - There is no mapped action for the predicted intent, 'greet'.
+2020-09-16 03:28:12 DEBUG    rasa.core.policies.form_policy  - There is no active form
+2020-09-16 03:28:12 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_0_MemoizationPolicy
+2020-09-16 03:28:12 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2020-09-16 03:28:12 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2020-09-16 03:28:12 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'e191fc85104842c28ee4e5fd86fdcf31'.
+Hey! How are you?
+Your input ->  i need some information about interfaces
+2020-09-16 03:28:18 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'e191fc85104842c28ee4e5fd86fdcf31'
+2020-09-16 03:28:18 DEBUG    rasa.nlu.classifiers.diet_classifier  - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2020-09-16 03:28:18 DEBUG    rasa.nlu.selectors.response_selector  - Adding following selector key to message property: default
+2020-09-16 03:28:18 DEBUG    rasa.core.processor  - Received user message 'i need some information about interfaces' with intent '{'name': 'iml_query', 'confidence': 0.9999961853027344}' and entities '[]'
+2020-09-16 03:28:18 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 8 events.
+2020-09-16 03:28:18 DEBUG    rasa.core.policies.memoization  - Current tracker state [None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_iml_query': 1.0, 'prev_action_listen': 1.0}]
+2020-09-16 03:28:18 DEBUG    rasa.core.policies.memoization  - There is a memorised next action 'iml_form'
+2020-09-16 03:28:18 DEBUG    rasa.core.policies.form_policy  - There is no active form
+2020-09-16 03:28:18 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_0_MemoizationPolicy
+2020-09-16 03:28:18 DEBUG    rasa.core.processor  - Predicted next action 'iml_form' with confidence 1.00.
+2020-09-16 03:28:18 DEBUG    rasa.core.actions.action  - Calling action endpoint to run action 'iml_form'.
+2020-09-16 03:28:20 DEBUG    rasa.core.processor  - Action 'iml_form' ended with events '[BotUttered('Please provide the source (From) app.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1600207100.3293614), <rasa.core.events.Form object at 0x00000212A4B93128>, <rasa.core.events.SlotSet object at 0x00000212A4B93278>]'.
+2020-09-16 03:28:20 DEBUG    rasa.core.processor  - Current slot values:
+        dest: None
+        requested_slot: src
+        src: None
+2020-09-16 03:28:20 DEBUG    rasa.core.policies.memoization  - Current tracker state [None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_iml_query': 1.0, 'prev_action_listen': 1.0}]
+2020-09-16 03:28:20 DEBUG    rasa.core.policies.memoization  - There is a memorised next action 'iml_form'
+2020-09-16 03:28:20 DEBUG    rasa.core.policies.mapping_policy  - There is no mapped action for the predicted intent, 'iml_query'.
+2020-09-16 03:28:20 DEBUG    rasa.core.policies.form_policy  - There is an active form 'iml_form'
+2020-09-16 03:28:20 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_3_FormPolicy
+2020-09-16 03:28:20 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2020-09-16 03:28:20 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2020-09-16 03:28:20 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'e191fc85104842c28ee4e5fd86fdcf31'.
+Please provide the source (From) app.
+Your input ->  Portal
+2020-09-16 03:28:54 DEBUG    rasa.core.tracker_store  - Recreating tracker for id 'e191fc85104842c28ee4e5fd86fdcf31'
+2020-09-16 03:28:54 DEBUG    rasa.nlu.classifiers.diet_classifier  - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2020-09-16 03:28:54 DEBUG    rasa.nlu.selectors.response_selector  - Adding following selector key to message property: default
+2020-09-16 03:28:54 DEBUG    rasa.core.processor  - Received user message 'Portal' with intent '{'name': 'iml_query', 'confidence': 0.9999994039535522}' and entities '[{'entity': 'app', 'start': 0, 'end': 6, 'role': 'O', 'value': 'Portal', 'extractor': 'DIETClassifier'}]'
+2020-09-16 03:28:54 DEBUG    rasa.core.processor  - Current slot values:
+        dest: None
+        requested_slot: src
+        src: None
+2020-09-16 03:28:54 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 14 events.
+2020-09-16 03:28:54 DEBUG    rasa.core.policies.memoization  - Current tracker state [{'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_iml_query': 1.0, 'prev_action_listen': 1.0}, {'intent_iml_query': 1.0, 'prev_iml_form': 1.0, 'active_form_iml_form': 1.0}, {'intent_iml_query': 1.0, 'prev_action_listen': 1.0, 'entity_app': 1.0, 'active_form_iml_form': 1.0}]
+2020-09-16 03:28:54 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2020-09-16 03:28:54 DEBUG    rasa.core.policies.form_policy  - There is an active form 'iml_form'
+2020-09-16 03:28:54 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_3_FormPolicy
+2020-09-16 03:28:54 DEBUG    rasa.core.processor  - Predicted next action 'iml_form' with confidence 1.00.
+2020-09-16 03:28:54 DEBUG    rasa.core.actions.action  - Calling action endpoint to run action 'iml_form'.
+2020-09-16 03:28:56 DEBUG    rasa.core.processor  - Action 'iml_form' ended with events '[BotUttered('Pease Wait, finding interfaces from Portal to Portal', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"src": "Portal", "dest": "Portal"}, 1600207136.925355), <rasa.core.events.SlotSet object at 0x00000212A725C828>, <rasa.core.events.SlotSet object at 0x00000212A725CEF0>, <rasa.core.events.Form object at 0x00000212A725CDD8>, <rasa.core.events.SlotSet object at 0x00000212A725CFD0>]'.
+c:\users\hpuser\anaconda3\lib\site-packages\rasa\utils\common.py:351: UserWarning: Action 'iml_form' set a slot type 'dest' which it never set during the training. This can throw off the prediction. Make sure to include training examples in your stories for the different types of slots this action can return. Remember: you need to set the slots manually in the stories by adding '- slot{"dest": Portal}' after the action.
+c:\users\hpuser\anaconda3\lib\site-packages\rasa\utils\common.py:351: UserWarning: Action 'iml_form' set a slot type 'src' which it never set during the training. This can throw off the prediction. Make sure to include training examples in your stories for the different types of slots this action can return. Remember: you need to set the slots manually in the stories by adding '- slot{"src": Portal}' after the action.
+2020-09-16 03:28:56 DEBUG    rasa.core.processor  - Current slot values:
+        dest: Portal
+        requested_slot: None
+        src: Portal
+2020-09-16 03:28:56 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_iml_query': 1.0, 'prev_action_listen': 1.0}, {'intent_iml_query': 1.0, 'slot_src_0': 1.0, 'prev_iml_form': 1.0, 'slot_dest_0': 1.0}]
+2020-09-16 03:28:56 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2020-09-16 03:28:56 DEBUG    rasa.core.policies.mapping_policy  - There is no mapped action for the predicted intent, 'iml_query'.
+2020-09-16 03:28:56 DEBUG    rasa.core.policies.form_policy  - There is no active form
+2020-09-16 03:28:56 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_1_TEDPolicy
+2020-09-16 03:28:56 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 0.96.
+2020-09-16 03:28:56 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2020-09-16 03:28:56 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'e191fc85104842c28ee4e5fd86fdcf31'.
+Pease Wait, finding interfaces from Portal to Portal
+Your input ->                                                                        
